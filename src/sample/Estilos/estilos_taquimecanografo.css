@@ -1,0 +1,31 @@
+.root{
+    -fx-base: #CAB3FF;
+}
+#btnF{
+-fx-base: #9997E8;
+-fx-min-height:20;
+-fx-min-width:40;
+-fx-background-radius: 5;
+-fx-padding: 8;
+}
+#btnNormal{
+-fx-base: #9997E8;
+-fx-pref-height:20;
+-fx-min-width:40;
+-fx-background-radius: 5;
+-fx-padding: 8;
+}
+#btnLargo{
+-fx-base: #9997E8;
+-fx-pref-height:20;
+-fx-min-width:80;
+-fx-background-radius: 5;
+-fx-padding: 8;
+}
+#btnEspacio{
+ -fx-base: #9997E8;
+ -fx-pref-height:20;
+ -fx-min-width:450;
+ -fx-background-radius: 5;
+ -fx-padding: 8;
+ }

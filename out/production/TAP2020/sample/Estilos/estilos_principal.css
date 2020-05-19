@@ -1,0 +1,10 @@
+.root{
+    -fx-background-image: url("../Imagenes/Burbujas.jpg");
+    -fx-background-size: cover, auto;
+}
+
+.menu-bar{
+    -fx-background-color: #94AEEB;
+    -fx-border-color: #7059FF;
+    -fx-border-width: 4;
+}

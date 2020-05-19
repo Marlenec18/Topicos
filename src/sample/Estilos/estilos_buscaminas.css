@@ -1,0 +1,21 @@
+.button:hover{
+-fx-base: #00e5ff ;
+}
+.root{
+-fx-base: #c5cae9;
+}
+#btnNormal{
+-fx-base: #7C4DFF;
+-fx-background-radious:19;
+}
+#btnVacio{
+ -fx-base: #3A9AE8;
+ }
+#btnV{
+-fx-base: #3A9AE8;
+}
+#btnMina{
+-fx-base: #21D5FF;
+-fx-background-image: url("../Imagenes/Bomba.png");
+-fx-background-size:  cover, auto;
+}
