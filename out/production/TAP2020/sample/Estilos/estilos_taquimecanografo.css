@@ -10,8 +10,8 @@
 }
 #btnNormal{
 -fx-base: #9997E8;
--fx-pref-height:20;
--fx-min-width:40;
+-fx-pref-height:30;
+-fx-min-width:50;
 -fx-background-radius: 5;
 -fx-padding: 8;
 }
@@ -25,7 +25,7 @@
 #btnEspacio{
  -fx-base: #9997E8;
  -fx-pref-height:20;
- -fx-min-width:450;
+ -fx-min-width:220;
  -fx-background-radius: 5;
  -fx-padding: 8;
  }

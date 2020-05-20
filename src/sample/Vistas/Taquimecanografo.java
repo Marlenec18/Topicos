@@ -1,5 +1,6 @@
 package sample.Vistas;
 
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -108,7 +109,7 @@ public class Taquimecanografo extends Stage {
             hTeclas5.getChildren().add(arBotones5[i]);
 
             if( i == 0  ) {
-                arBotones4[i].setId("btnLargo");
+                arBotones4[0].setId("btnLargo");
             }
             if(i == 12 ) {
                 arBotones5[i].setId("btnLargo");
@@ -125,11 +126,12 @@ public class Taquimecanografo extends Stage {
         for (int i = 0; i < 11; i++) {
             arBotones6[i] = new Button(arTeclas6[i]);
             hTeclas6.getChildren().add(arBotones6[i]);
-            if( i == 4)
+            if(i == 4) {
                 arBotones6[i].setId("btnEspacio");
-
-            arBotones6[i].setId("btnNormal");
-
+            }
+            else {
+                arBotones6[i].setId("btnNormal");
+            }
         }
 
         hTeclas1.setAlignment(Pos.CENTER);
@@ -138,25 +140,31 @@ public class Taquimecanografo extends Stage {
         hTeclas4.setAlignment(Pos.CENTER);
         hTeclas5.setAlignment(Pos.CENTER);
         hTeclas6.setAlignment(Pos.CENTER);
-        hTeclas1.setSpacing(5);
+
+        hTeclas1.setSpacing(13.5);
+        hTeclas1.setPadding(new Insets(5));
         hTeclas2.setSpacing(5);
+        hTeclas2.setPadding(new Insets(5));
         hTeclas3.setSpacing(5);
-        hTeclas4.setSpacing(5);
-        hTeclas5.setSpacing(5);
-        hTeclas6.setSpacing(5);
+        hTeclas3.setPadding(new Insets(5));
+        hTeclas4.setSpacing(8.5);
+        hTeclas4.setPadding(new Insets(5));
+        hTeclas5.setSpacing(11.5);
+        hTeclas5.setPadding(new Insets(5));
+        hTeclas6.setSpacing(6);
+        hTeclas6.setPadding(new Insets(5));
 
         EventoTaquimecanografo objEvento = new EventoTaquimecanografo(arBotones1 , arBotones2 , arBotones3 , arBotones4 , arBotones5 , arBotones6);
         txaEscritura.setOnKeyPressed( objEvento);
 
         txaEscritura.setOnKeyReleased(objEvento);
 
-
         vboxPrincipal = new VBox();
         vboxTeclado = new VBox();
         vboxTeclado.getChildren().addAll(hTeclas1,hTeclas2,hTeclas3,hTeclas4,hTeclas5,hTeclas6);
         vboxPrincipal.setSpacing(7);
         vboxPrincipal.getChildren().addAll(tlbMenu, txaTexto,txaEscritura,vboxTeclado);
-        escena = new Scene(vboxPrincipal,800,500);
+        escena = new Scene(vboxPrincipal,850,600);
         vboxPrincipal.getStylesheets().add("sample/Estilos/estilos_taquimecanografo.css");
     }
 
