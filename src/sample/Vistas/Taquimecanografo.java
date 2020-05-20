@@ -86,11 +86,10 @@ public class Taquimecanografo extends Stage {
             arBotones2[i] = new Button(arTeclas2[i]);
             hTeclas2.getChildren().add(arBotones2[i]);
 
-            if( i != 0 && i != 14 ) {
-                arBotones3[i].setId("btnNormal");
-                arBotones2[i].setId("btnNormal");
-            }
-            else {
+            arBotones3[i].setId("btnNormal");
+            arBotones2[i].setId("btnNormal");
+
+            if(i == 0 || i == 13){
                 arBotones3[i].setId("btnLargo");
                 arBotones2[i].setId("btnLargo");
             }
@@ -108,18 +107,18 @@ public class Taquimecanografo extends Stage {
             arBotones5[i] = new Button(arTeclas5[i]);
             hTeclas5.getChildren().add(arBotones5[i]);
 
+            arBotones4[i].setId("btnNormal");
+            arBotones5[i].setId("btnNormal");
+
             if( i == 0  ) {
                 arBotones4[0].setId("btnLargo");
+                arBotones5[0].setId("btnLargo");
             }
             if(i == 12 ) {
-                arBotones5[i].setId("btnLargo");
+                arBotones5[12].setId("btnLargo");
             }
             if(i == 13 ) {
-                arBotones4[14].setId("btnLargo");
-            }
-            else {
-                arBotones4[i].setId("btnNormal");
-                arBotones5[i].setId("btnNormal");
+                arBotones5[12].setId("btnLargo");
             }
         }
 
@@ -141,17 +140,17 @@ public class Taquimecanografo extends Stage {
         hTeclas5.setAlignment(Pos.CENTER);
         hTeclas6.setAlignment(Pos.CENTER);
 
-        hTeclas1.setSpacing(13.5);
+        hTeclas1.setSpacing(15.5);
         hTeclas1.setPadding(new Insets(5));
         hTeclas2.setSpacing(5);
         hTeclas2.setPadding(new Insets(5));
         hTeclas3.setSpacing(5);
         hTeclas3.setPadding(new Insets(5));
-        hTeclas4.setSpacing(8.5);
+        hTeclas4.setSpacing(11.55);
         hTeclas4.setPadding(new Insets(5));
-        hTeclas5.setSpacing(11.5);
+        hTeclas5.setSpacing(9.55);
         hTeclas5.setPadding(new Insets(5));
-        hTeclas6.setSpacing(6);
+        hTeclas6.setSpacing(7.52);
         hTeclas6.setPadding(new Insets(5));
 
         EventoTaquimecanografo objEvento = new EventoTaquimecanografo(arBotones1 , arBotones2 , arBotones3 , arBotones4 , arBotones5 , arBotones6);
@@ -164,7 +163,7 @@ public class Taquimecanografo extends Stage {
         vboxTeclado.getChildren().addAll(hTeclas1,hTeclas2,hTeclas3,hTeclas4,hTeclas5,hTeclas6);
         vboxPrincipal.setSpacing(7);
         vboxPrincipal.getChildren().addAll(tlbMenu, txaTexto,txaEscritura,vboxTeclado);
-        escena = new Scene(vboxPrincipal,850,600);
+        escena = new Scene(vboxPrincipal,900,600);
         vboxPrincipal.getStylesheets().add("sample/Estilos/estilos_taquimecanografo.css");
     }
 
